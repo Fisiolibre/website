@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #3B4A59;
+    --secundary-color: #131926;
+    --btn-color:#274D60;
+    --text-color: #ffffff;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Sombra de texto */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para la pantalla de carga */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #005AC1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;  /* Empieza invisible */
+    visibility: hidden;  
+    transition: opacity 1s ease, visibility 0s 1s;  /* Aparece durante 1.5s */
+}
+
+/* Animación cuando está visible */
+#loading-screen.show {
+    opacity: 1;  /* Aparece de forma suave */
+    visibility: visible;  /* Asegura que el contenedor esté visible cuando se haga el fade-in */
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación para el loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animaciones para los elementos */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+
+.header {
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secundary-color);
+    box-shadow: var(--shadow);
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    max-width: 15%;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    margin-right: 133px;
+    font-size: 1.2rem;
+    transform: scaleY(0.9);
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s; /* Retraso para que se vean de forma escalonada */
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s; /* Retraso para que se vean de forma escalonada */
+}
+
+.book-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    color: #333;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.book-author {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.view-button {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.view-button:hover {
+    background-color: var(--secundary-color);
+    transform: scale(1.05);
+}
+
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 2001;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        margin-right: 0;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+
+    .book-cover {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Estilo del modal */
+
+/* PDF Viewer Modal */
+.modal {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+}
+
+/* Contenido del modal */
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 98%;/* Ajusta el ancho máximo */
+    max-height: 100%;/* Ajusta la altura máxima */
+    overflow: hidden;/* Esconde el contenido que sobresalga */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Área del visor con scroll */
+#pdf-viewer {
+    width: 50%;
+    height: calc(100% - 40px);/* Ajusta según el tamaño de los controles */
+    overflow-y: auto;/* Habilitar desplazamiento vertical */
+    overflow-x: hidden;/* Deshabilitar desplazamiento horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Botones de navegación */
+#pdf-controls {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#pdfModal {
+    display: none;/* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);/* Fondo semi-transparente */
+    overflow: auto;/* Permitir scroll si es necesario */
+    z-index: 1000;
+}
+
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

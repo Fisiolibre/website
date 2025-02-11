@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>fisiolibre - Ayuda</title>
+    <style>
+        :root {
+            --primary-color: #3B4A59;
+            --text-color: #ffffff;
+            --secundary-color: #131926;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Animaciones para los elementos */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secundary-color);
+            box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+            animation: slideInFromTop 1s ease-out forwards;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            max-width: 15%;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            margin-right: 133px;
+            font-size: 1.2rem;
+            transform: scaleY(0.9);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: white;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-content p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.5;
+        }
+
+        .legal-notice {
+            text-align: left;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            color: #333;
+        }
+
+        .faq {
+            margin-top: 1rem;
+        }
+
+        .question {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #ccc;
+            font-weight: 800;
+            transition: 0.3s ease;
+            margin-bottom: 2rem;
+            /* Espacio entre preguntas */
+        }
+
+        .question:hover {
+            color: var(--primary-color);
+        }
+
+        .question span {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: 0.3s ease;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1rem;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        /* Cuando la respuesta se expanda */
+        .answer.expanded {
+            max-height: 500px;
+            /* O un valor más grande dependiendo de la longitud de las respuestas */
+            padding: 1rem;
+            /* Añadir padding para que se vea más espacioso */
+        }
+
+        .answer li {
+            list-style-type: none;
+            /* Elimina el punto o viñeta */
+            margin-left: 0;
+            /* Opcional, si quieres quitar la sangría */
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body id="contacto-page1">
+    <header class="header">
+        <div class="logo">
+            <img src="../imagenes/Logo.png" alt="Fisio libre">
+            Fisio Libre
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="legal.html">Legal</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 style="font-size: 3rem; transform: scaleY(0.9); transform: scaleX(1.2);">¿Necesitas ayuda?</h1>
+        <p>Resvisa las preguas frecuentes</p>
+
+        <div class="legal-notice">
+            <div class="faq">
+                <div class="question">
+                    <span>+</span>¿Cómo se descargan los libros?
+                </div>
+                <div class="answer">Para descargar cualquier libro que se encuentre en este sitio tienes que seguir los
+                    siguientes pasos:
+                    <li></li><br>
+                    <li>1. Dirígete a la pagina de inicio y da clic en el botón que dice «ver libros, regístrate o
+                        suscríbete».</li><br>
+                    <li>2. Al presionar el botón te saltara un formulario para que introduzcas un nombre y una
+                        contraseña.</li><br>
+                    <li>3. Seguido a esto te enviara a una pagina de especialidades donde tienes que elegir la de tu
+                        preferencia dando clic sobre el.</li><br>
+                    <li>4. En breve te enviara a una pagina con todos los libros que están disponibles en esa
+                        especialidad.</li>
+                </div>
+
+                <div class="question">
+                    <span>+</span>¿Puedo descargar libros desde mi celular?
+                </div>
+                <div class="answer">Claro! puedes descargar cualquier libro desde cualquier dispositivo pero es
+                    recomendable hacerlo desde una laptop o computadora de escritorio para mas facilidad; cuando
+                    descargues el libro que deseas lo puedes Realizar en la opcion que te brinda al selecionar el libro.</div>
+
+                <div class="question">
+                    <span>+</span>¿Cuál es el limite de descargas por día?
+                </div>
+                <div class="answer">No existe limite, puedes descargar cuantos libros quieras por día.</div>
+
+                <div class="question">
+                    <span>+</span>No puedo descargar un libro ¿Qué hago?
+                </div>
+                <div class="answer">Muy fácil, si se cayó el link o por algún motivo no puedes descargar el libro por
+                    favor envíanos un correo al soporte dejando un mensaje y en breve te contestaremos; También puedes
+                    enviarnos mensaje vía Instagram o Facebook ya que ahí estamos mas activos que NUNCA!</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1UAdqLm6Lh/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fisio_libre"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@FisioLibre"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // Selecciona todas las preguntas
+    const questions = document.querySelectorAll('.question');
+
+    // Agrega un event listener a cada pregunta
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const symbol = question.querySelector('span');
+
+            // Alternar visibilidad de la respuesta
+            if (answer.classList.contains('expanded')) {
+                answer.classList.remove('expanded');
+                symbol.textContent = '+';
+            } else {
+                answer.classList.add('expanded');
+                symbol.textContent = '-';
+            }
+        });
+    });
+</script>
+
+</html>

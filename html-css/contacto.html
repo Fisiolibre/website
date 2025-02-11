@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>fisiolibre - Contacto</title>
+    <style>
+        :root {
+            --primary-color: #3B4A59;
+            --text-color: #ffffff;
+            --secundary-color: #131926;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Animaciones para los elementos */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .header {
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secundary-color);
+            box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+            animation: slideInFromTop 1s ease-out forwards;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            max-width: 15%;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            margin-right: 133px;
+            font-size: 1.2rem;
+            transform: scaleY(0.9);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: white;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-content p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.5;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+        }
+
+        .contact-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #0084FF;
+            text-decoration: none;
+        }
+
+        .legal-notice {
+            text-align: center;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body id="contacto-page">
+    <header class="header">
+        <div class="logo">
+            <img src="../imagenes/Logo.png" alt="Fisio libre">
+            Fisio Libre
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="legal.html">Legal</a>
+        </nav>
+    </header>
+
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <main class="main-content">
+        <h1 style="font-size: 3rem; transform: scaleY(0.9); transform: scaleX(1.2);">Contacto</h1>
+        <p>Si tienes dudas, comentarios o quieres reportar contenido, ponte en contacto con nosotros a través de los
+            siguientes medios.</p>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <img src="../imagenes/Facebook.png" alt="Facebook">
+                <h3>Facebook</h3>
+                <a href="https://www.facebook.com/share/1UAdqLm6Lh/">Fisio Libre</a>
+            </div>
+
+            <div class="contact-card">
+                <img src="../imagenes/TIK TOK.png" alt="Tik tok">
+                <h3>Tik Tok</h3>
+                <a href="https://www.tiktok.com/@fisiolibre?_t=ZM-8tpn9mXZGKr&_r=1">@fisiolibre</a>
+            </div>
+
+            <div class="contact-card">
+                <img src="../imagenes/Gmail.png" alt="Correo">
+                <h3>Correo</h3>
+                <a href="mailto:omarchavezbalvino@gmail.com" style="font-size: 17px;">omarchavezbalvino@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="legal-notice">
+            <p>Si deseas reportar contenido o solicitar su eliminación, por favor revisa el apartado de procedimientos
+                para retiro de contenido en nuestro apartado legal.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1UAdqLm6Lh/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fisio_libre"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@FisioLibre"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

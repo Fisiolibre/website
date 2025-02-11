@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>fisiolibre - Contacto</title>
+    <style>
+        :root {
+            --primary-color: #3B4A59;
+            --text-color: #ffffff;
+            --secundary-color: #131926;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Animaciones para los elementos */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+        .header {
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secundary-color);
+            box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+            animation: slideInFromTop 1s ease-out forwards;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            max-width: 15%;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            margin-right: 133px;
+            font-size: 1.2rem;
+            transform: scaleY(0.9);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: white;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-content p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.5;
+        }
+
+        /*////////////////////////////////////*/
+        .legal-notice {
+            text-align: left;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            color: #333;
+        }
+        /*////////////////////////////////////*/
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body id="contacto-page">
+    <header class="header">
+        <div class="logo">
+            <img src="../imagenes/Logo.png" alt="Fisio libre">
+            Fisio Libre
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="#legal">Legal</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 style="font-size: 3rem; transform: scaleY(0.9); transform: scaleX(1.2);">LEGAL</h1>
+        <p>📜 Política de Privacidad y Aviso Legal📜</p>
+
+        <div class="legal-notice">
+            <h2 style="font-size: 2rem;">Procedencia del Contenido</h2>
+            <p>Los libros y materiales disponibles en esta biblioteca digital han sido recopilados con el propósito de
+                fomentar la lectura y el aprendizaje entre estudiantes de fisioterapia. No reclamamos la autoría de
+                estos contenidos; todos los derechos pertenecen a sus respectivos autores y editoriales.</p>
+
+            <h2 style="font-size: 2rem;">Declaración sobre Derechos de Autor</h2>
+            <p>Esta plataforma no se lucra con los materiales aquí compartidos ni busca infringir derechos de autor. Si
+                eres el titular de alguno de los contenidos y deseas que sea retirado, por favor contáctanos y
+                procederemos a su eliminación inmediata.</p>
+
+            <h2 style="font-size: 2rem;">Uso de la Información Recogida</h2>
+            <p>La información de esta página se ofrece exclusivamente con fines educativos y de apoyo académico. No se
+                garantiza la actualización constante de los materiales, por lo que se recomienda a los usuarios
+                verificar siempre la vigencia de la información con fuentes oficiales.</p>
+
+            <h2 style="font-size: 2rem;">Enlaces a Terceros</h2>
+            <p>Esta biblioteca puede contener enlaces a sitios externos que no están bajo nuestro control. No nos
+                responsabilizamos por el contenido, exactitud o prácticas de privacidad de dichos sitios.</p>
+
+            <h2 style="font-size: 2rem;">Nota Final</h2>
+            <p>El objetivo de esta biblioteca es servir como un recurso complementario para estudiantes de fisioterapia,
+                promoviendo el acceso a material de estudio que fortalezca su formación profesional.</p>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1UAdqLm6Lh/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fisio_libre"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@FisioLibre"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

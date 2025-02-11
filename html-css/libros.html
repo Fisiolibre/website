@@ -1,0 +1,526 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisio Libre</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libros.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../imagenes/Logo.png" alt="Fisio libre">
+            Fisio Libre
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+            <a href="legal.html">Legal</a>
+        </nav>
+    </header>
+
+    <h1 class="main-title">Libros Disponibles</h1>
+
+    <div class="books-grid">
+        <!-- Ejemplo de tarjetas de libros -->
+        <div class="book-card" onclick="openDriveViewer('1KpD0RLDSuKwbl7IwPNRyIhkrXVjNKHe6')">
+            <img src="../imagenes-libros/agentes fisicos en rehabilitacion.png" alt="Anatomía" class="book-cover">
+            <h3 class="book-title">Agentes fisicos en rehabilitacion Parte 1</h3>
+            <p class="book-author">Michelle H. Cameron</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1e1UPpNiwApcNQtS67bbdWtQxnuLoMpiY')">
+            <img src="../imagenes-libros/agentes fisicos en rehabilitacion.png" alt="Biomecánica" class="book-cover">
+            <h3 class="book-title">Agentes fisicos en rehabilitacion Parte 2</h3>
+            <p class="book-author">Michelle H. Cameron</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1F83Yqu57uKhNpKFIr0eK5FcyI2Y3m05D')">
+            <img src="../imagenes-libros/agentes fisicos terapeuticos.png" alt="Biomecánica" class="book-cover">
+            <h3 class="book-title">Agentes Fisicos Terapeuticos</h3>
+            <p class="book-author">Jorge Enrique Martín Cordero</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <!-- Puedes agregar más tarjetas siguiendo el mismo patrón -->
+
+        <div class="book-card" onclick="openDriveViewer('1KGDJPbVeU-97pWJ0EM44OeL9cbl9kXtp')">
+            <img src="../imagenes-libros/Actualizaciones_en_Fisiología_del_Ejercicio.jpg" alt="Actualizaciones en Fisiología del Ejercicio"
+                class="book-cover">
+            <h3 class="book-title">Actualizaciones en Fisiología del Ejercicio</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('14nzYKtC1S9elRwudWfcnBY8SVnhtGHUo')">
+            <img src="../imagenes-libros/agentes_fisicos_en_rehabilitacion.jpg" alt="Agentes Físicos en Rehabilitación" class="book-cover">
+            <h3 class="book-title">Agentes Físicos en Rehabilitación</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Q0YRziOy7C5FC3BUimsoRSLhjHSnmckW')">
+            <img src="../imagenes-libros/Anatomia_de_los_estiramientos.jpg" alt="Anatomía de los Estiramientos" class="book-cover">
+            <h3 class="book-title">Anatomía de los Estiramientos</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1dYO3vYQwfy6eHGeHylpHIPtZHxVKePP1')">
+            <img src="../imagenes-libros/Ap._Clinica_tecnicas_neuromusculares_extremidades_inferiores_II.jpg"
+                alt="Ap. Clínica Técnicas Neuromusculares - Extremidades Inferiores II" class="book-cover">
+            <h3 class="book-title">Ap. Clínica Técnicas Neuromusculares - Extremidades Inferiores II</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1MBPTHZi9K768b82ErNMFQ-CS9tNhI638')">
+            <img src="../imagenes-libros/Ap._Clinica_tecnicas_neuromusculares_extremidades_superiores_I.jpg"
+                alt="Ap. Clínica Técnicas Neuromusculares - Extremidades Superiores I" class="book-cover">
+            <h3 class="book-title">Ap. Clínica Técnicas Neuromusculares - Extremidades Superiores I</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Lm1QJhOTzffnFBiKDTqfRIVseAUWS7Ma')">
+            <img src="../imagenes-libros/atlas_de_los_estiramientos.jpg" alt="Atlas de los Estiramientos" class="book-cover">
+            <h3 class="book-title">Atlas de los Estiramientos</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Vu6adLW-DgsbpEqB236YG46LOw0ICnA7')">
+            <img src="../imagenes-libros/BASES_DE_LA_TERAPIA_MANUAL_Y_OSTEOPATÍA.jpg" alt="Bases de la Terapia Manual y Osteopatía" class="book-cover">
+            <h3 class="book-title">Bases de la Terapia Manual y Osteopatía</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1OQipmVG26SsJvgjvhZG0cHMNyOdfDns8')">
+            <img src="../imagenes-libros/Clinical_Neurodynamics.jpg" alt="Clinical Neurodynamics" class="book-cover">
+            <h3 class="book-title">Clinical Neurodynamics</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1kfWPHMgKDBIkbdVm22O8MYpjYcFqtGiG')">
+            <img src="../imagenes-libros/componente_desarrollo_motor_tipico_y_atipico.jpg" alt="Componente Desarrollo Motor Típico y Atípico"
+                class="book-cover">
+            <h3 class="book-title">Componente Desarrollo Motor Típico y Atípico</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1vAJoWhVshm8q8LcK9X5ndSXoq4DwqK1A')">
+            <img src="../imagenes-libros/Concepto_Mulligan.jpg" alt="Concepto Mulligan" class="book-cover">
+            <h3 class="book-title">Concepto Mulligan</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1LsOyyINEbGI5t0ONjmJMYPbazugY68C2')">
+            <img src="../imagenes-libros/CONTROL_MOTOR.jpg" alt="Control Motor" class="book-cover">
+            <h3 class="book-title">Control Motor</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1ZmVnEasNvwqUBhpadot8xLz_3KSThYhr')">
+            <img src="../imagenes-libros/EJERCICIO_TERAPEUTICO_DE_KISNER.jpg" alt="Ejercicio Terapéutico de Kisner" class="book-cover">
+            <h3 class="book-title">Ejercicio Terapéutico de Kisner</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1N5keyJOCpuoLi2Uq_j248i1Oo7C1Bszw')">
+            <img src="../imagenes-libros/Ejercicio_Terapéutico_Fundamentos_y_Técnica_KISNER.jpg" alt="Ejercicio Terapéutico Fundamentos y Técnica (Kisner)"
+                class="book-cover">
+            <h3 class="book-title">Ejercicio Terapéutico Fundamentos y Técnica (Kisner)</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1wjprpq1EpgG8pBtzp_uLvI_WFuosvhpy')">
+            <img src="../imagenes-libros/Electroterapia_Albornoz.jpg" alt="Electroterapia Albornoz" class="book-cover">
+            <h3 class="book-title">Electroterapia Albornoz</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1rBqyllpewSSR2kffmwecjJ4wugJkMduS')">
+            <img src="../imagenes-libros/El_concepto_de_Maitland__Su_aplicacion_en_fisioterapia.jpg" alt="El Concepto de Maitland: Su Aplicación en Fisioterapia"
+                class="book-cover">
+            <h3 class="book-title">El Concepto de Maitland: Su Aplicación en Fisioterapia</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1O6JAZbJb1lRUMLoIjVtw-YUqsQiYSDoI')">
+            <img src="../imagenes-libros/El_desarrollo_psicomotor.jpg" alt="El Desarrollo Psicomotor" class="book-cover">
+            <h3 class="book-title">El Desarrollo Psicomotor</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1BRn-Kh3rHVU2bpacB0YCz94m0IvPNUSA')">
+            <img src="../imagenes-libros/Entrenamiento_propioceptivo.jpg" alt="Entrenamiento Propioceptivo" class="book-cover">
+            <h3 class="book-title">Entrenamiento Propioceptivo</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('17aKUodmjnWsk-0W72isGkagFFsrzZi_x')">
+            <img src="../imagenes-libros/Estimulación_Temprana_y_Psicomotricidad.jpg" alt="Estimulación Temprana y Psicomotricidad" class="book-cover">
+            <h3 class="book-title">Estimulación Temprana y Psicomotricidad</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Cu0JIgk8dXY-u-KC85AxdXTytwCvgiVH')">
+            <img src="../imagenes-libros/Estiramiento_de_Las_Cadenas_Musculares.jpg" alt="Estiramiento de las Cadenas Musculares" class="book-cover">
+            <h3 class="book-title">Estiramiento de las Cadenas Musculares</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1qS87xul3hR2eHQzflLFwkMECsvEjobCl')">
+            <img src="../imagenes-libros/Experiencias_con_el_Concepto.jpg" alt="Experiencias con el Concepto" class="book-cover">
+            <h3 class="book-title">Experiencias con el Concepto</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1tQ5m8D-2J5kXx56ztnj6DAR_IjDV2pID')">
+            <img src="../imagenes-libros/Farmacologia_para_Fisioterapeutas.jpg" alt="Farmacología para Fisioterapeutas" class="book-cover">
+            <h3 class="book-title">Farmacología para Fisioterapeutas</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1u3OPjnU_5ZUl2F2cxKrOmZtlhoVkO2_9')">
+            <img src="../imagenes-libros/Fisioterapia_en_neurología.jpg" alt="Fisioterapia en Neurología" class="book-cover">
+            <h3 class="book-title">Fisioterapia en Neurología</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('19vBGyuC_iYmWchN7VGYkvdrQngmcXcai')">
+            <img src="../imagenes-libros/Fisioterapia_Manual_COLUMNA.jpg" alt="Fisioterapia Manual: Columna" class="book-cover">
+            <h3 class="book-title">Fisioterapia Manual: Columna</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1X4EtZOmbuemDPgIFRnw_ZVSqAN-grqWx')">
+            <img src="../imagenes-libros/FNP_panamericana.jpg" alt="FNP Panamericana" class="book-cover">
+            <h3 class="book-title">FNP Panamericana</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1QarhrVe116uZPyoqHWV2Rr69R1duLx40')">
+            <img src="../imagenes-libros/Fundamentos_de_fisioterapia_respiratoria_y_ventilación_mecánica.jpg"
+                alt="Fundamentos de Fisioterapia Respiratoria y Ventilación Mecánica" class="book-cover">
+            <h3 class="book-title">Fundamentos de Fisioterapia Respiratoria y Ventilación Mecánica</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('18Cux-Q3wX6sBENu1wgsdMrsv3e6rVBKx')">
+            <img src="../imagenes-libros/GONIOMETRIA.jpg" alt="Goniometría" class="book-cover">
+            <h3 class="book-title">Goniometría</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1cPxosoaBhYTz6zLmy-WvvwPwIvbL9QaL')">
+            <img src="../imagenes-libros/Guía_de_Masoterapia_para_Fisioterapeutas.jpg" alt="Guía de Masoterapia para Fisioterapeutas" class="book-cover">
+            <h3 class="book-title">Guía de Masoterapia para Fisioterapeutas</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1BHOIw7ta24KWG7XemHI4etH46g0XrMVN')">
+            <img src="../imagenes-libros/Kaltenborn_Fisioterapia_Manual_EXTREMIDADES.jpg" alt="Kaltenborn: Fisioterapia Manual Extremidades"
+                class="book-cover">
+            <h3 class="book-title">Kaltenborn: Fisioterapia Manual Extremidades</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1VPmIlsXj7eGHmxms6r-8LILCCD4eno4fk')">
+            <img src="../imagenes-libros/Kinesiology_Taping_Teoría_y_Práctica.jpg" alt="Kinesiology Taping: Teoría y Práctica" class="book-cover">
+            <h3 class="book-title">Kinesiology Taping: Teoría y Práctica</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1zhivWf_TmYgqXKeD3kNntPY2d9_oc6Bk')">
+            <img src="../imagenes-libros/las_cadenas_musculares_tomo_I.jpg" alt="Las Cadenas Musculares Tomo I" class="book-cover">
+            <h3 class="book-title">Las Cadenas Musculares Tomo I</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Oxvm3VO6r91Ft63ZNJV46jj75DG7wAM-')">
+            <img src="../imagenes-libros/las_cadenas_musculares_tomo_II.jpg" alt="Las Cadenas Musculares Tomo II" class="book-cover">
+            <h3 class="book-title">Las Cadenas Musculares Tomo II</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1IfKo7A1_N5c-iInDpzMjZTWouRVZ77AI')">
+            <img src="../imagenes-libros/las_cadenas_musculares_tomo_III.jpg" alt="Las Cadenas Musculares Tomo III" class="book-cover">
+            <h3 class="book-title">Las Cadenas Musculares Tomo III</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1qEVi_Twy6IujhvFm45pA6W2-UEAGycNT')">
+            <img src="../imagenes-libros/las_cadenas_musculares_tomo_IV.jpg" alt="Las Cadenas Musculares Tomo IV" class="book-cover">
+            <h3 class="book-title">Las Cadenas Musculares Tomo IV</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1ubSF-b04cj6aLpAHL4oIik32Wm9PGoHw')">
+            <img src="../imagenes-libros/Las_cadenas_neuromusculares_tomo_V.jpg" alt="Las Cadenas Neuromusculares Tomo V" class="book-cover">
+            <h3 class="book-title">Las Cadenas Neuromusculares Tomo V</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1ZU74ngkeiQi8hEh75yK1yCQAIqscrTqb')">
+            <img src="../imagenes-libros/las_CADENA_MUSCULARES.jpg" alt="Las Cadenas Musculares" class="book-cover">
+            <h3 class="book-title">Las Cadenas Musculares</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('16ZvDBRCEmsKjonK8w8m40hGwIe3OpB3P')">
+            <img src="../imagenes-libros/Maitland's_vertebral_manipulation.jpg" alt="Maitland's Vertebral Manipulation" class="book-cover">
+            <h3 class="book-title">Maitland's Vertebral Manipulation</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1gan6VlqRBlKzRa6hZKhHkSz2gKD4DPzG')">
+            <img src="../imagenes-libros/Maitland_Manipulacion_Vertebral.jpg" alt="Maitland Manipulación Vertebral" class="book-cover">
+            <h3 class="book-title">Maitland Manipulación Vertebral</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1HMS0VKbmbN5NFAsRNO68byCDrhhW2RcP')">
+            <img src="../imagenes-libros/Manual_de_Exploracion_Fisica_del_Aparato_Locomotor.jpg" alt="Manual de Exploración Física del Aparato Locomotor"
+                class="book-cover">
+            <h3 class="book-title">Manual de Exploración Física del Aparato Locomotor</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Q37c8pytvQgSGEHsmMwAG3n6Qoh6CKd6')">
+            <img src="../imagenes-libros/Manual_de_Farmacologia_y_Terapeutica.jpg" alt="Manual de Farmacología y Terapéutica" class="book-cover">
+            <h3 class="book-title">Manual de Farmacología y Terapéutica</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1X3aU5cB_MTlR65PbdX_dTIHIQw336piB')">
+            <img src="../imagenes-libros/Manual_de_fitoterapia.jpg" alt="Manual de Fitoterapia" class="book-cover">
+            <h3 class="book-title">Manual de Fitoterapia</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('14lKEpJtH0aPL_nroEJ2z-Gz7l20BXfHh')">
+            <img src="../imagenes-libros/Manual_De_Pruebas_Diagnosticas_en_Traumatologia_&_Ortopedia.jpg" alt="Manual De Pruebas Diagnósticas en Traumatología & Ortopedia"
+                class="book-cover">
+            <h3 class="book-title">Manual De Pruebas Diagnósticas en Traumatología & Ortopedia</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1ZkaxC2BOzLvWeaU-I2y2IKsdIA7vv1Y4')">
+            <img src="../imagenes-libros/Marcha_Humana_Biomecánica_evaluación_y_patología.jpg" alt="Marcha Humana Biomecánica, Evaluación y Patología"
+                class="book-cover">
+            <h3 class="book-title">Marcha Humana Biomecánica, Evaluación y Patología</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1E6oSi_USKaI9lk2TnWTxTEXDRzaRxXUU')">
+            <img src="../imagenes-libros/Masoterapia_Clinica_Basica.jpg" alt="Masoterapia Clínica Básica" class="book-cover">
+            <h3 class="book-title">Masoterapia Clínica Básica</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1zccmlxdQ-dR_rf7Var6kkUT3XKF-3jOy')">
+            <img src="../imagenes-libros/Netter,_fundamentos_de_Fisiología.jpg" alt="Netter, Fundamentos de Fisiología" class="book-cover">
+            <h3 class="book-title">Netter, Fundamentos de Fisiología</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1mrj_MTqpSMCRY1B3CgPCpB1n52QooU4Z')">
+            <img src="../imagenes-libros/Neurología_en_esqueletos.jpg" alt="Neurología en Esqueletos" class="book-cover">
+            <h3 class="book-title">Neurología en Esqueletos</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1YU2BZno7hyQONHOUO_tXFE7wq7wMdbKS')">
+            <img src="../imagenes-libros/Orthopaedic_Manual_Physical_Therapy.jpg" alt="Orthopaedic Manual Physical Therapy" class="book-cover">
+            <h3 class="book-title">Orthopaedic Manual Physical Therapy</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('13h7S-FlZUOTGVkmeMDzr5FvP7aBZkjoW')">
+            <img src="../imagenes-libros/Orthopaedic_Medicine.jpg" alt="Orthopaedic Medicine" class="book-cover">
+            <h3 class="book-title">Orthopaedic Medicine</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1Zjb7BpumzGX84p5e9xiINIrQIcoOzGLP')">
+            <img src="../imagenes-libros/postura_y_movimiento_del_niñi_con_paralisis_cerebral.jpg" alt="Postura y Movimiento del Niño con Parálisis Cerebral"
+                class="book-cover">
+            <h3 class="book-title">Postura y Movimiento del Niño con Parálisis Cerebral</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('12NJ859hPPNfRqkl98AjlNxmSOpq3XdQY')">
+            <img src="../imagenes-libros/pruebas_clinicas_para_patologia_osea_articular_y_muscular.jpg" alt="Pruebas Clínicas para Patología Ósea, Articular y Muscular"
+                class="book-cover">
+            <h3 class="book-title">Pruebas Clínicas para Patología Ósea, Articular y Muscular</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1nUqrPUw22Z0hWTqWMVDiudbfCSlHxOqu')">
+            <img src="../imagenes-libros/PRUEBAS_FUNCIONALES_MUSCULARES.jpg" alt="Pruebas Funcionales Musculares" class="book-cover">
+            <h3 class="book-title">Pruebas Funcionales Musculares</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1rRe5-eGI_f4lgVCcCyMlB3TkaAPNNH6J')">
+            <img src="../imagenes-libros/Rang_y_Dale_Farmacologia.jpg" alt="Rang y Dale Farmacología" class="book-cover">
+            <h3 class="book-title">Rang y Dale Farmacología</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1nrGPN_fakEwT9jXUB2Hn79dthhNqyE08')">
+            <img src="../imagenes-libros/Readaptacion_tras_Lesiones_Deportivas.jpg" alt="Readaptación Tras Lesiones Deportivas" class="book-cover">
+            <h3 class="book-title">Readaptación Tras Lesiones Deportivas</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1ldvjxDi6wPu1VO6D9mtp0uTkoyHfVTX5')">
+            <img src="../imagenes-libros/rehabilitacion_ortopedica_clinica.jpg" alt="Rehabilitación Ortopédica Clínica" class="book-cover">
+            <h3 class="book-title">Rehabilitación Ortopédica Clínica</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1GGSThfLwHorqnbIyXM58ks-__eipUwi0')">
+            <img src="../imagenes-libros/SEMIOLOGIA_CLINICA_APARATO_LOCOMOTOR.jpg" alt="Semiología Clínica Aparato Locomotor" class="book-cover">
+            <h3 class="book-title">Semiología Clínica Aparato Locomotor</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1zYyHJoVGdGhDW4GY5H1QMqxUWrqwH_fJ')">
+            <img src="../imagenes-libros/Sistema_Fascial_Anatomía,_Valoración_y_tratamiento_Tutusaus.jpg" alt="Sistema Fascial: Anatomía, Valoración y Tratamiento"
+                class="book-cover">
+            <h3 class="book-title">Sistema Fascial: Anatomía, Valoración y Tratamiento</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1IqdgS3HE8QcQzX12AHJX30fH_99iDTu3')">
+            <img src="../imagenes-libros/Tecnicas_de_balance_muscular_Tecnicas_de_compressed.jpg" alt="Técnicas de Balance Muscular" class="book-cover">
+            <h3 class="book-title">Técnicas de Balance Muscular</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1hViICz-e1o6P3Yu6v8d5WGhE_-MIYpLZ')">
+            <img src="../imagenes-libros/teorias_del_control_motor.jpg" alt="Teorías del Control Motor" class="book-cover">
+            <h3 class="book-title">Teorías del Control Motor</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+
+        <div class="book-card" onclick="openDriveViewer('1F78dQ8ujHaJ18idQSEhLTsjPxQiO9JfH')">
+            <img src="../imagenes-libros/terapias_miofasciales.jpg" alt="Terapias Miofasciales" class="book-cover">
+            <h3 class="book-title">Terapias Miofasciales</h3>
+            <p class="book-author">[Autor]</p>
+            <button class="view-button">Ver Libro</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1UAdqLm6Lh/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fisio_libre"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@FisioLibre"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal para el visor de Google Drive -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closePdfViewer()">&times;</button>
+            <iframe id="driveViewer" src="" frameborder="0" style="width: 100%; height: 500px;"></iframe>
+            <button id="download-button" class="download-button">Descargar PDF</button>
+        </div>
+    </div>
+
+    <script>
+        function openDriveViewer(fileId) {
+            const modal = document.getElementById('pdfModal');
+            const iframe = document.getElementById('driveViewer');
+            const downloadButton = document.getElementById('download-button');
+
+            iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+            modal.style.display = 'block';
+
+            // Configurar el botón de descarga
+            downloadButton.onclick = function () {
+                const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+                window.open(downloadUrl, '_blank');
+            };
+        }
+
+        function closePdfViewer() {
+            const modal = document.getElementById('pdfModal');
+            const iframe = document.getElementById('driveViewer');
+            iframe.src = ''; // Limpiar el iframe
+            modal.style.display = 'none';
+        }
+
+        // Cerrar el modal al hacer clic fuera del contenido
+        window.onclick = function (event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target == modal) {
+                closePdfViewer();
+            }
+        };
+    </script>
+</body>
+
+</html>

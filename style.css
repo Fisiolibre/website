@@ -1,0 +1,371 @@
+:root {
+    --primary-color: #3B4A59;
+    --secundary-color: #131926;
+    --text-color: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Animación cuando está visible */
+#loading-screen.show {
+    opacity: 1;  /* Aparece de forma suave */
+    visibility: visible;  /* Asegura que el contenedor esté visible cuando se haga el fade-in */
+}
+
+/* Animaciones para los elementos */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Añadir un pequeño retraso a cada sección  al cargar*/
+.hero { animation-delay: 0.5s; }
+.stats { animation-delay: 1s; }
+.book-slider { animation-delay: 1.5s; }
+.features { animation-delay: 2s; }
+.testimonials { animation-delay: 2.5s; }
+.community { animation-delay: 3s; }
+footer { animation-delay: 3.5s; }
+
+/* Animación para el contenido principal al cargar*/
+.hero, .stats, .book-slider, .features, .testimonials, .community, footer {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s; /* Retraso para que se vean de forma escalonada */
+}
+/*/////////////////////////////////////////////////////////////////*/
+.header {
+    background-color: var(--secundary-color);
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    max-width: 15%;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    margin-right: 133px;
+    font-size: 1.2rem;
+    transform: scaleY(0.9);
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    padding: 4rem 2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.hero-content {
+    max-width: 50%;
+    font-size: 40px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    margin-right: 70px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: var(--secundary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--secundary-color);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-item img {
+    max-width: 90%
+}
+
+.stat-item i {
+    font-size: 2rem;
+}
+/*//////////////////////////////////////////*/
+.book-slider {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    text-align: center;
+}
+
+.book-slider h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.books-container {
+    display: flex;
+    overflow: hidden; /* Oculta el scroll */
+    gap: 1rem; /* Espacio entre libros */
+    padding: 1rem;
+    position: relative;
+    width: calc(215px * 5 + 5rem); /* Muestra 6 libros (ancho de cada libro + gap) */
+    margin:auto;
+}
+
+.book-card {
+    flex: 0 0 215px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Efecto suave al deslizar */
+}
+
+.book-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/*//////////////////////////////////////////*/
+.features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: var( --secundary-color);
+}
+
+.feature {
+    flex: 1;
+    padding: 1rem;
+    max-width: 300px;
+    margin-left: -250px;
+}
+
+.feature i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature img {
+    max-width: 200%
+}
+/*//////////////////////////////////////////*/
+.testimonials {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background-color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#testimonial-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.testimonial-avatar {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 100;
+}
+.slider-btn.prev {
+    left: 200px;
+}
+.slider-btn.next {
+    right: 200px;
+}
+
+.testimonial-avatar i {
+    font-size: 3rem;
+    color: #333;
+}
+/*//////////////////////////////////////////*/
+.community {
+    display: flex;
+    /* Usa flexbox para centrar */
+    flex-direction: column;
+    /* Alinea los elementos en una columna */
+    align-items: center;
+    /* Centra horizontalmente */
+    padding: 2rem;
+    /* Añade padding para espaciado */
+    text-align: center;
+    /* Alinea el texto al centro */
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.slider-nav {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .stats,
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}

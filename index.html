@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisio Libre</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/imagenes/Logo.png" alt="Fisio libre">
+            Fisio Libre
+        </div>
+        <nav class="nav-menu">
+            <a href="#Inicio">Inicio</a>
+            <a href="html-css/contacto.html" id="contacto-link">Contacto</a>
+            <a href="html-css/ayuda.html">Ayuda</a>
+            <a href="html-css/legal.html">Legal</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descarga libros de terapia fisica</h1>
+            <p>Desde cualquier dispositivo</p>
+            <p>fácil y rápido</p>
+            <a href="html-css/libros.html" class="cta-button">Ver libros</a>
+        </div>
+        <div class="hero-image">
+            <img src="imagenes/laptop.png" alt="Laptop con PDFs">
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <img src="imagenes/1.png" alt="Más de 2500 libros gratis">
+        </div>
+        <div class="stat-item">
+            <img src="imagenes/2.png" alt="De más de 70 Especialidades">
+        </div>
+        <div class="stat-item">
+            <img src="imagenes/3.png" alt="A un solo clic">
+        </div>
+    </section>
+
+    <section class="book-slider">
+        <h2>Libros que te pueden interesar</h2>
+        <div class="books-container">
+            <div class="book-card">
+                <img src="imagenes-libros/Actualizaciones_en_Fisiología_del_Ejercicio.jpg" alt="Libro 1">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/agentes fisicos en rehabilitacion.png" alt="Libro 2">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/agentes fisicos terapeuticos.png" alt="Libro 3">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/agentes_fisicos_en_rehabilitacion.jpg" alt="Libro 4">
+            </div>
+
+            <div class="book-card">
+                <img src="imagenes-libros/Ap._Clinica_tecnicas_neuromusculares_extremidades_inferiores_II.jpg"
+                    alt="Libro 1">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/Ap._Clinica_tecnicas_neuromusculares_extremidades_superiores_I.jpg"
+                    alt="Libro 2">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/Clinical_Neurodynamics.jpg" alt="Libro 3">
+            </div>
+            <div class="book-card">
+                <img src="imagenes-libros/componente_desarrollo_motor_tipico_y_atipico.jpg" alt="Libro 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature left">
+            <img src="imagenes/facil.png" alt="facil">
+        </div>
+        <div class="feature center">
+            <img src="imagenes/rapido.png" alt="rapido">
+        </div>
+        <div class="feature right">
+            <img src="imagenes/seguro.png" alt="seguro">
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Nuestra Comunidad</h2>
+        <div class="testimonial-slider">
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&lt;</button>
+            <div class="testimonial" id="testimonial-container">
+                <div class="slide">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"Estudiar estos libros es una excelente práctica para complementar tu aprendizaje en fisioterapia. Recuerda que este material no es de nuestra autoría, sino una selección pensada para apoyarte como estudiante. Aprovecha estos recursos para profundizar en tu formación profesional."</p><br>
+                    <h4>Danny Chavez Balvino</h4><br>
+                    <p>Licenciado - Terapia Física y Rehabilitación</p>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"El diseño de esta página ha sido creado pensando en un ambiente atractivo y funcional para los terapeutas. Cada detalle busca facilitar la navegación, destacando los recursos educativos de forma clara y amigable. Espero que esta experiencia visual complemente tu formación y te inspire en tu desarrollo profesional."</p><br>
+                    <h4>Nataly Perez Mendoza</h4><br>
+                    <p>Tecnica - Diseñora Web</p>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>"La funcionalidad de esta página fue diseñada para ofrecer una experiencia fluida y eficiente. Cada elemento está optimizado para garantizar que los recursos estén al alcance de los estudiantes, facilitando el acceso y promoviendo un aprendizaje continuo en fisioterapia. Mi objetivo es que la tecnología complemente tu desarrollo profesional."</p><br>
+                    <h4>Patrik Chavez Balvino</h4><br>
+                    <p>Tecnico - Programador Web</p>
+                </div>
+            </div>
+            <button class="slider-btn next" onclick="changeSlide(1)">&gt;</button>
+        </div>
+    </section>
+
+    <section class="community">
+        <div class="text-center">
+            <h2>Una pagina creada por estudiantes, para estudiantes</h2>
+            <a href="https://www.youtube.com/@FisioLibre" class="cta-button">Ver videos</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1UAdqLm6Lh/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fisio_libre"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@FisioLibre"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
