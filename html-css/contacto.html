@@ -175,6 +175,98 @@
             color: white;
             font-size: 1.5rem;
         }
+        /*estilo responsive*/
+        .hamburger {
+            display: none; /* Oculto por defecto */
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 40px;  /* Alineado en la parte superior */
+            right: 20px; /* Pegado a la derecha */
+            z-index: 1100;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* Justo debajo del header */
+                left: 0;
+                width: 100%;
+                background-color: var(--secundary-color);
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                text-align: center;
+                padding: 1rem 0;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease-in-out;
+                z-index: 1000; /* Asegura que está por encima */
+            }
+
+            .nav-menu a {
+                font-size: 1.5rem;
+                color: white;
+                text-decoration: none;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .nav-menu.show {
+                height: 200px; /* Ajusta la altura del menú */
+            }
+
+            .nav-menu.show a {
+                opacity: 1;
+            }
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                z-index: 1100;
+            }
+
+            .hamburger div {
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                margin: 3px 0;
+                transition: 0.3s;
+            }
+
+            /* 🔥 Baja TODAS las secciones */
+            body.menu-open .main-content,
+            body.menu-open .contact-cards,
+            body.menu-open footer {
+                transform: translateY(200px); /* Misma altura que el menú */
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .contact-cards {
+                flex-direction: column; /* Cambia de horizontal a vertical */
+                align-items: center;
+            }
+
+            .contact-card {
+                width: 90%;
+            }
+
+            .legal-notice {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -190,6 +282,11 @@
             <a href="ayuda.html">Ayuda</a>
             <a href="legal.html">Legal</a>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <!-- Pantalla de carga -->
@@ -236,5 +333,17 @@
         </div>
     </footer>
 </body>
-
+<script>
+    //estylo responsive
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("show");
+            document.body.classList.toggle("menu-open"); // Agrega clase al body
+        });
+    });
+</script>
+    
 </html>
