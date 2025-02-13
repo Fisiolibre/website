@@ -23,6 +23,11 @@
             <a href="ayuda.html">Ayuda</a>
             <a href="legal.html">Legal</a>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <h1 class="main-title">Libros Disponibles</h1>
@@ -520,6 +525,17 @@
                 closePdfViewer();
             }
         };
+        
+        //estylo responsive
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+                document.body.classList.toggle("menu-open"); // Agrega clase al body
+            });
+        });
     </script>
 </body>
 
