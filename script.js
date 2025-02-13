@@ -51,3 +51,14 @@ prevTestimonialBtn.addEventListener('click', () => moveTestimonials(-1));
 
 // Inicializa el primer testimonio
 updateTestimonialPosition();
+
+//estylo responsive
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+        document.body.classList.toggle("menu-open"); // Agrega clase al body
+    });
+});
