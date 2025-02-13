@@ -35,8 +35,8 @@ h1 {
 
 /* Animación cuando está visible */
 #loading-screen.show {
-    opacity: 1;  /* Aparece de forma suave */
-    visibility: visible;  /* Asegura que el contenedor esté visible cuando se haga el fade-in */
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Animaciones para los elementos */
@@ -45,6 +45,7 @@ h1 {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -52,29 +53,24 @@ h1 {
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
-/* Añadir un pequeño retraso a cada sección  al cargar*/
-.hero { animation-delay: 0.5s; }
-.stats { animation-delay: 1s; }
-.book-slider { animation-delay: 1.5s; }
-.features { animation-delay: 2s; }
-.testimonials { animation-delay: 2.5s; }
-.community { animation-delay: 3s; }
-footer { animation-delay: 3.5s; }
+.hero { animation-delay: 0.5s;}
+.stats { animation-delay: 1s;}
+.book-slider { animation-delay: 1.5s;}
+.features { animation-delay: 2s;}
+.testimonials { animation-delay: 2.5s;}
+.community { animation-delay: 3s;}
+footer { animation-delay: 3.5s;}
 
-/* Animación para el contenido principal al cargar*/
 .hero, .stats, .book-slider, .features, .testimonials, .community, footer {
     animation: fadeIn 1s ease-out forwards;
     opacity: 0;
-    animation-delay: 0.5s; /* Retraso para que se vean de forma escalonada */
+    animation-delay: 0.5s;
 }
+
 /*/////////////////////////////////////////////////////////////////*/
 .header {
     background-color: var(--secundary-color);
@@ -94,9 +90,7 @@ footer { animation-delay: 3.5s; }
     font-weight: bold;
 }
 
-.logo img {
-    max-width: 15%;
-}
+.logo img { max-width: 15%;}
 
 .nav-menu {
     display: flex;
@@ -112,10 +106,7 @@ footer { animation-delay: 3.5s; }
     transition: 0.3s ease;
     font-size: 1.5rem;
 }
-
-.nav-menu a:hover {
-    opacity: 0.8;
-}
+.nav-menu a:hover { opacity: 0.8;}
 
 .hero {
     padding: 4rem 2rem;
@@ -125,27 +116,10 @@ footer { animation-delay: 3.5s; }
     align-items: center;
     margin-left: 100px;
 }
-
-.hero-content {
-    max-width: 50%;
-    font-size: 40px;
-}
-
-.hero-image img {
-    max-width: 100%;
-    margin-right: 70px;
-}
-
-.hero h1 {
-    font-size: 70px;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+.hero-content { max-width: 50%; font-size: 40px;}
+.hero-image img { max-width: 100%; margin-right: 70px;}
+.hero h1 { font-size: 70px; margin-bottom: 1rem; font-weight: bold;}
+.hero p { font-size: 40px; margin-bottom: 10px;}
 
 .cta-button {
     background-color: var(--secundary-color);
@@ -156,7 +130,7 @@ footer { animation-delay: 3.5s; }
     display: inline-block;
     font-weight: bold;
 }
-
+/*********************************************/
 .stats {
     display: flex;
     justify-content: space-around;
@@ -170,14 +144,9 @@ footer { animation-delay: 3.5s; }
     align-items: center;
     gap: 1rem;
 }
+.stat-item img { max-width: 90%}
+.stat-item i { font-size: 2rem;}
 
-.stat-item img {
-    max-width: 90%
-}
-
-.stat-item i {
-    font-size: 2rem;
-}
 /*//////////////////////////////////////////*/
 .book-slider {
     background-color: var(--primary-color);
@@ -185,19 +154,16 @@ footer { animation-delay: 3.5s; }
     text-align: center;
 }
 
-.book-slider h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
+.book-slider h2 { font-size: 2rem; margin-bottom: 2rem;}
 
 .books-container {
     display: flex;
-    overflow: hidden; /* Oculta el scroll */
-    gap: 1rem; /* Espacio entre libros */
+    overflow: hidden;
+    gap: 1rem;
     padding: 1rem;
     position: relative;
-    width: calc(215px * 5 + 5rem); /* Muestra 6 libros (ancho de cada libro + gap) */
-    margin:auto;
+    width: calc(215px * 5 + 5rem);
+    margin: auto;
 }
 
 .book-card {
@@ -205,7 +171,7 @@ footer { animation-delay: 3.5s; }
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.5s ease-in-out; /* Efecto suave al deslizar */
+    transition: transform 0.5s ease-in-out;
 }
 
 .book-card img {
@@ -213,39 +179,26 @@ footer { animation-delay: 3.5s; }
     height: 300px;
     object-fit: cover;
 }
+
 /*//////////////////////////////////////////*/
 .features {
     display: flex;
     justify-content: space-around;
+    padding: 2rem;
     text-align: center;
-    background-color: var( --secundary-color);
+    background-color: var(--secundary-color);
 }
 
-.feature {
-    flex: 1;
-    padding: 1rem;
-    max-width: 300px;
-    margin-left: -250px;
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
-
-.feature i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.feature img {
-    max-width: 200%
-}
+.feature-item i { font-size: 2rem;}
+.feature-item img { max-width: 110%}
 /*//////////////////////////////////////////*/
-.testimonials {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.testimonial {
-    max-width: 600px;
-    margin: 0 auto;
-}
+.testimonials { padding: 4rem 2rem; text-align: center;}
+.testimonial { max-width: 600px; margin: 0 auto;}
 
 .testimonial-avatar {
     width: 100px;
@@ -264,10 +217,8 @@ footer { animation-delay: 3.5s; }
     margin: 0 auto;
     overflow: hidden;
 }
-#testimonial-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+#testimonial-container { display: flex; transition: transform 0.5s ease-in-out;}
+
 .slide {
     min-width: 100%;
     box-sizing: border-box;
@@ -276,14 +227,9 @@ footer { animation-delay: 3.5s; }
     transform: scale(0.9);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.slide.active {
-    opacity: 1;
-    transform: scale(1);
-}
-.testimonial-avatar {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
+.slide.active { opacity: 1; transform: scale(1);}
+.testimonial-avatar { font-size: 50px; margin-bottom: 10px;}
+
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -296,31 +242,18 @@ footer { animation-delay: 3.5s; }
     font-size: 18px;
     z-index: 100;
 }
-.slider-btn.prev {
-    left: 200px;
-}
-.slider-btn.next {
-    right: 200px;
-}
 
-.testimonial-avatar i {
-    font-size: 3rem;
-    color: #333;
-}
+.slider-btn.prev { left: 200px;}
+.slider-btn.next { right: 200px;}
+.testimonial-avatar i { font-size: 3rem; color: #333;}
 /*//////////////////////////////////////////*/
 .community {
     display: flex;
-    /* Usa flexbox para centrar */
     flex-direction: column;
-    /* Alinea los elementos en una columna */
     align-items: center;
-    /* Centra horizontalmente */
     padding: 2rem;
-    /* Añade padding para espaciado */
     text-align: center;
-    /* Alinea el texto al centro */
 }
-
 
 .social-links {
     display: flex;
@@ -328,11 +261,7 @@ footer { animation-delay: 3.5s; }
     gap: 1rem;
     margin-top: 2rem;
 }
-
-.social-links a {
-    color: white;
-    font-size: 1.5rem;
-}
+.social-links a { color: white; font-size: 1.5rem;}
 
 .slider-nav {
     font-size: 2rem;
@@ -343,29 +272,119 @@ footer { animation-delay: 3.5s; }
     transform: translateY(-50%);
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-}
+footer { text-align: center; padding: 2rem; margin-top: 2rem;}
 
 @media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center;}
+    .hero-content { max-width: 100%;}
+    .stats, .features { flex-direction: column;  align-items: center;}
+    .nav-menu {  display: none;}
+}
+
+/*estilo responsive*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--secundary-color);
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1rem 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+        z-index: 1000; /* Asegura que está por encima */
+    }
+
+    .nav-menu a {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav-menu.show {
+        height: 200px; /* Ajusta la altura del menú */
+    }
+
+    .nav-menu.show a {
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .hamburger div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
+        margin-left: 0;
     }
 
     .hero-content {
         max-width: 100%;
+        font-size: 1.2rem;
     }
 
-    .stats,
-    .features {
-        flex-direction: column;
-        align-items: center;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .nav-menu {
-        display: none;
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* 🔥 Baja TODAS las secciones */
+    body.menu-open .hero,
+    body.menu-open .stats,
+    body.menu-open .book-slider,
+    body.menu-open .features,
+    body.menu-open .testimonials,
+    body.menu-open .community,
+    body.menu-open footer {
+        transform: translateY(200px); /* Misma altura que el menú */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .slider-btn.prev {
+        left: 1px;
+    }
+
+    .slider-btn.next {
+        right: 1px;
     }
 }
