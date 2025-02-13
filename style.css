@@ -33,7 +33,6 @@ h1 {
     font-weight: bold;
 }
 
-/* Animación cuando está visible */
 #loading-screen.show {
     opacity: 1;
     visibility: visible;
