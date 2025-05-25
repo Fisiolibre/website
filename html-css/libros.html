@@ -33,6 +33,11 @@
 
     <h1 class="main-title">Libros Disponibles</h1>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar libro por nombre...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
     <div class="books-grid">
         <!-- Ejemplo de tarjetas de libros -->
         <div class="book-card" onclick="openDriveViewer('1KpD0RLDSuKwbl7IwPNRyIhkrXVjNKHe6')">
@@ -55,8 +60,6 @@
             <p class="book-author">Jorge Enrique Martín Cordero</p>
             <button class="view-button">Ver Libro</button>
         </div>
-
-        <!-- Puedes agregar más tarjetas siguiendo el mismo patrón -->
 
         <div class="book-card" onclick="openDriveViewer('1KGDJPbVeU-97pWJ0EM44OeL9cbl9kXtp')">
             <img src="../imagenes-libros/Actualizaciones_en_Fisiología_del_Ejercicio.jpg" alt="Actualizaciones en Fisiología del Ejercicio"
@@ -82,7 +85,7 @@
 
         <div class="book-card" onclick="openDriveViewer('1XAamQD-Onr2WRRuvawOGEj_POf4CvmkR')">
             <img src="../imagenes-libros/Anatomia_y_Fisiologia_Humana.png" alt="Anatomia_y_Fisiologia_Humana" class="book-cover">
-            <h3 class="book-title">Anatomia_y_Fisiologia_Humana</h3>
+            <h3 class="book-title">Anatomia y Fisiologia Humana</h3>
             <p class="book-author">[Autor]</p>
             <button class="view-button">Ver Libro</button>
         </div>
@@ -379,7 +382,7 @@
 
         <div class="book-card" onclick="openDriveViewer('1T32JPe6eBVyj8juitffzJIY296HQ5MqV')">
             <img src="../imagenes-libros/Netter_Atlas_de_Anatomía_Humana_4_Edición.png" alt="Netter_Atlas_de_Anatomía_Humana_4_Edición" class="book-cover">
-            <h3 class="book-title">Netter_Atlas_Anatomía_Humana_4Edición</h3>
+            <h3 class="book-title">Netter Atlas AnatomíaHumana 4 Edición</h3>
             <p class="book-author">[Autor]</p>
             <button class="view-button">Ver Libro</button>
         </div>
@@ -549,6 +552,24 @@
             hamburger.addEventListener("click", function () {
                 navMenu.classList.toggle("show");
                 document.body.classList.toggle("menu-open"); // Agrega clase al body
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("keyup", function () {
+            const input = this.value.toLowerCase();
+            const books = document.querySelectorAll(".book-card");
+    
+            books.forEach(book => {
+                const title = book.querySelector(".book-title").textContent.toLowerCase();
+                const author = book.querySelector(".book-author").textContent.toLowerCase();
+    
+                if (title.includes(input) || author.includes(input)) {
+                    book.style.display = "block";
+                } else {
+                    book.style.display = "none";
+                }
             });
         });
     </script>
